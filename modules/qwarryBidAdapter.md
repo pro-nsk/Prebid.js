@@ -15,42 +15,14 @@ Qwarry bid adapter supports Banner and Video ads.
 ```
 const adUnits = [
   {
-    code: 'test-div',
-    mediaTypes: {
-      banner: {
-        sizes: [[300, 250], [300,600]]
-      }
-    },
     bids: [
       {
           bidder: 'qwarry',
           params: {
-              siteId: 'qwarry-site-id', // siteId provided by Qwarry
+              zoneToken: '?????????????????????', // zoneToken provided by Qwarry
           }
       }
     ]
   }
 ];
-```
-
-# Video Test Parameters
-```
-const videoAdUnit = {
-  code: 'test-div',
-  sizes: [[640, 480]],
-  mediaTypes: {
-    video: {
-      playerSize: [[640, 480]],
-      context: 'instream'
-    },
-  },
-  bids: [
-    {
-      bidder: 'qwarry',
-      params: {
-        siteId: 'qwarry-site-id', // siteId provided by Qwarry
-      }
-    }
-  ]
-};
 ```
