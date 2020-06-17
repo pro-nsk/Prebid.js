@@ -7,6 +7,7 @@ export const spec = {
   code: BIDDER_CODE,
   supportedMediaTypes: ['banner', 'video'],
   aliases: ['ex'], // short code
+  
   isBidRequestValid: (bid) => {
     return bid.params && bid.params.zoneToken;
   },
@@ -16,24 +17,16 @@ export const spec = {
     return {
       method: 'POST',
       url: ENDPOINT + zoneToken,
-      data: {
-        bidId: bid.bidId
-      },
+      data: {},
+      bidId: bid.bidId
     };
   },
   interpretResponse: (serverResponse, request) => {
     const serverBody = serverResponse.body;
 
-    let bid = {};
-    bid.ad = serverBody.ad;
-    bid.creativeId = serverBody.creative_id;
+    let bid = Object.create(serverBody);
     bid.cpm = parseFloat(serverBody.price);
-    bid.requestId = serverBody.bidId;
-    bid.width = serverBody.width;
-    bid.height = serverBody.height;
-    bid.ttl = serverBody.ttl;
-    bid.netRevenue = serverBody.netRevenue;
-    bid.currency = serverBody.currency;
+    bid.requestId = request.bidId;
 
     return [bid];
   },
