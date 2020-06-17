@@ -7,7 +7,7 @@ export const spec = {
   code: BIDDER_CODE,
   supportedMediaTypes: ['banner', 'video'],
   aliases: ['ex'], // short code
-  
+
   isBidRequestValid: (bid) => {
     return bid.params && bid.params.zoneToken;
   },

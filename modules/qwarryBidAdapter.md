@@ -3,7 +3,7 @@
 ```
 Module Name: Qwarry Bidder Adapter
 Module Type: Bidder Adapter
-Maintainer: akostritsa@asteriosoft.com
+Maintainer: akasheev@asteriosoft.com
 ```
 
 # Description
@@ -13,7 +13,7 @@ Qwarry bid adapter supports Banner and Video ads.
 
 # Test Parameters
 ```
-var adUnits = [
+const adUnits = [
   {
     code: 'test-div',
     mediaTypes: {
@@ -23,7 +23,7 @@ var adUnits = [
     },
     bids: [
       {
-          bidder: 'quantumdex',
+          bidder: 'qwarry',
           params: {
               siteId: 'qwarry-site-id', // siteId provided by Qwarry
           }
@@ -35,7 +35,7 @@ var adUnits = [
 
 # Video Test Parameters
 ```
-var videoAdUnit = {
+const videoAdUnit = {
   code: 'test-div',
   sizes: [[640, 480]],
   mediaTypes: {
@@ -46,7 +46,7 @@ var videoAdUnit = {
   },
   bids: [
     {
-      bidder: 'quantumdex',
+      bidder: 'qwarry',
       params: {
         siteId: 'qwarry-site-id', // siteId provided by Qwarry
       }
