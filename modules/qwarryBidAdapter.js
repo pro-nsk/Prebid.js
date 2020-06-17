@@ -7,7 +7,6 @@ const ENDPOINT = 'https://ui-bidder.kantics.co/bid/adtag?prebid=true&zoneToken='
 export const spec = {
   code: BIDDER_CODE,
   supportedMediaTypes: ['banner', 'video'],
-  aliases: ['ex'], // short code
 
   isBidRequestValid: (bid) => {
     return bid.params && bid.params.zoneToken;
