@@ -30,22 +30,6 @@ export const spec = {
     bid.cpm = parseFloat(serverBody.price);
 
     return [bid];
-  },
-
-  getUserSyncs: (syncOptions, serverResponses, gdprConsent, uspConsent) => {
-
-  },
-
-  onTimeout: (timeoutData) => {
-
-  },
-
-  onBidWon: (bid) => {
-
-  },
-  
-  onSetTargeting: (bid) => {
-
   }
 }
 
