@@ -39,8 +39,8 @@ export const spec = {
   },
 
   onBidWon: function (bid) {
-    if (bid['winUrl']) {
-      ajax(bid['winUrl'], null);
+    if (bid.winUrl) {
+      ajax(bid.winUrl, null);
       return true;
     }
     return false;
