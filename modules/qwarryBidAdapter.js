@@ -1,6 +1,7 @@
 import { registerBidder } from 'src/adapters/bidderFactory';
 import { deepClone } from '../src/utils';
 import { ajax } from '../src/ajax';
+import { VIDEO } from '../src/mediaTypes';
 
 const BIDDER_CODE = 'qwarry';
 const ENDPOINT = 'https://ui-bidder.kantics.co/bid/adtag?prebid=true&zoneToken='
@@ -29,6 +30,11 @@ export const spec = {
     let bid = deepClone(serverBody);
     bid.cpm = parseFloat(serverBody.price);
 
+    // banner or video
+    if (VIDEO === bid.format) {
+      bid.vastXml = bid.ad;
+    }
+
     return [bid];
   },
 
@@ -38,7 +44,7 @@ export const spec = {
       return true;
     }
     return false;
-  },
+  }
 }
 
 registerBidder(spec);
