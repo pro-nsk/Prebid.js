@@ -3,11 +3,11 @@ import {spec} from 'modules/qwarryBidAdapter.js'
 import {newBidder} from 'src/adapters/bidderFactory.js'
 
 const REQUEST = {
-  'bidder': 'quantum',
-  'sizes': [[300, 250]],
-  'renderMode': 'banner',
+  'bidder': 'qwarry',
+  'sizes': [[720, 480]],
+  'renderMode': 'video',
   'params': {
-    zoneToken: 21546
+    zoneToken: 'f4ae4e4c-8d27-41fb-92d8-c62104d03ea1'
   }
 }
 
