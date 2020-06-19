@@ -15,7 +15,7 @@ const serverResponse = {
   ad: '',
   requestId: 1111,
   cpm: 2.4,
-  currency: USD
+  currency: 'USD',
   width: 720,
   height: 480,
   ttl: 200,
