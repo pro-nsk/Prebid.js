@@ -4,7 +4,7 @@ import { ajax } from '../src/ajax';
 import { VIDEO } from '../src/mediaTypes';
 
 const BIDDER_CODE = 'qwarry';
-const ENDPOINT = 'https://ui-bidder.kantics.co/bid/adtag?prebid=true&zoneToken='
+export const ENDPOINT = 'https://ui-bidder.kantics.co/bid/adtag?prebid=true&zoneToken='
 
 export const spec = {
   code: BIDDER_CODE,
