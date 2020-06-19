@@ -22,7 +22,7 @@ const serverResponse = {
   creativeId: 1,
   netRevenue: true,
   winUrl: 'https://event-logger.kantics.co/event/win?id=H4sIAAAAAAAAAGNgZmBgLJrb5FfJwMgAAYwYDGYGRvuDr1vldgS-YbRM0rj_5bTTnDZ9juNrUzLEGLDoAwAZjHHDVQAAAA==&zoneId=1',
-  format: 'video',
+  format: 'video'
 }
 
 describe('qwarryBidAdapter', function () {
